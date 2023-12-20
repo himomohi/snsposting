@@ -5,8 +5,9 @@ import streamlit as st
 import PIL.Image
 
 #API 키 파일을 불러오는 코드
-api_key = st.secrets('GOOGLE_API_KEY')
-service= st.secrets('GOOGLE_APPLICATION_CREDENTIALS')
+api_key = st.secrets['GOOGLE_API_KEY']
+service= st.secrets['GOOGLE_APPLICATION_CREDENTIALS']
+
 
 ####################
 #코드시작 
