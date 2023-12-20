@@ -23,7 +23,7 @@ if 'last_request_time' not in st.session_state:
     st.session_state['last_request_time'] = 0
 
 # 이미지 업로드
-uploaded_file = st.file_uploader("Choose a file")
+uploaded_file = st.file_uploader("사진 업로드")
 if uploaded_file is not None:
     img = PIL.Image.open(uploaded_file)
     models = genai.GenerativeModel('gemini-pro-vision')
@@ -42,7 +42,10 @@ if uploaded_file is not None:
             st.image(img,width=200)
             
             st.write(response.text)
+
+            
             st.write("")
+
 
         # 마지막 요청 시간 업데이트
         st.session_state['last_request_time'] = time.time()
