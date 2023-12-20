@@ -41,7 +41,7 @@ if uploaded_file is not None:
             
             st.image(img,width=200)
             
-            st.write(response.text)
+            st.markdown(response.text)
             st.write("")
 
         # 마지막 요청 시간 업데이트
