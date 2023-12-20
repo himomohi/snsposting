@@ -10,17 +10,6 @@ load_dotenv()  # 환경 변수 로드 (괄호 추가)
 api_key = st.secrets('GOOGLE_API_KEY')
 service= st.secrets('GOOGLE_APPLICATION_CREDENTIALS')
 
-
-
-
-# 서비스 계정 키 파일의 전체 경로를 구함
-# 구글API 서비스 사용시 계정키파일이 필요하다. 하여 해당 부분으로 로드 하였다.
-# 현재 파일의 디렉토리 경로를 구함
-current_dir = os.path.dirname(os.path.realpath(__file__))
-service_account_path = os.path.join(current_dir, 'grand-proton-329404-93f5bf76d4d8.json')
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = service_account_path  # 환경 변수 설정
-
-
 ####################
 #코드시작 
 ###################
