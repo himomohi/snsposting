@@ -15,6 +15,8 @@ import google.generativeai as genai
 genai.configure(api_key=api_key)  # credentials 인자 제거
 
 st.header("SNS Posting AI")
+st.caption('SNS 포스팅 할 이미지를 업로드해주세요. ')
+
 
 # 세션 상태 초기화
 if 'last_request_time' not in st.session_state:
