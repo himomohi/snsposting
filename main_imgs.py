@@ -7,7 +7,8 @@ import PIL.Image
 
 #API 키 파일을 불러오는 코드
 load_dotenv()  # 환경 변수 로드 (괄호 추가)
-api_key = os.getenv('GOOGLE_API_KEY')
+api_key = st.secrets('GOOGLE_API_KEY')
+service= st.secrets('GOOGLE_APPLICATION_CREDENTIALS')
 
 
 
@@ -18,6 +19,7 @@ api_key = os.getenv('GOOGLE_API_KEY')
 current_dir = os.path.dirname(os.path.realpath(__file__))
 service_account_path = os.path.join(current_dir, 'grand-proton-329404-93f5bf76d4d8.json')
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = service_account_path  # 환경 변수 설정
+
 
 ####################
 #코드시작 
