@@ -40,7 +40,9 @@ if uploaded_file is not None:
             response = models.generate_content([prompt, img])
             
             st.image(img,width=200)
+            
             st.write(response.text)
+            st.write("")
 
         # 마지막 요청 시간 업데이트
         st.session_state['last_request_time'] = time.time()
