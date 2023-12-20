@@ -39,7 +39,7 @@ if uploaded_file is not None:
         with st.spinner("😀SNS 포스팅 내용을 작성중이에요."):
             response = models.generate_content([prompt, img])
             
-            st.image(img)
+            st.image(img,width=250)
             st.write(response.text)
 
         # 마지막 요청 시간 업데이트
