@@ -1,12 +1,10 @@
 
-import os
-from dotenv import load_dotenv
+
 import streamlit as st
 
 import PIL.Image
 
 #API 키 파일을 불러오는 코드
-load_dotenv()  # 환경 변수 로드 (괄호 추가)
 api_key = st.secrets('GOOGLE_API_KEY')
 service= st.secrets('GOOGLE_APPLICATION_CREDENTIALS')
 
